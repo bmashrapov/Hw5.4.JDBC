@@ -5,6 +5,7 @@ public interface EmployeeDAO {
     Employee getEmployeeById(int id);
     List<Employee> getAllEmployees();
     void updateEmployee(Employee employee);
-    void deleteEmployee(int id);
+    void deleteEmployee(Employee employee);
+
 }
 
