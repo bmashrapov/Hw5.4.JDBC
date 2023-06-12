@@ -2,7 +2,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-    @Table public class Employee {
+@Table(name = "employee")
+public class Employee {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "id")
@@ -38,6 +39,17 @@ import java.util.Objects;
         public Employee() {
 
         }
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "city_id")
+    private City city;
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
 
         public int getId() {
         return id;
