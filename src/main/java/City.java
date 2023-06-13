@@ -20,8 +20,6 @@ public class City {
 
     }
 
-    // Добавляем геттеры и сеттеры для связанной сущности Employee
-
     public List<Employee> getEmployees() {
         return employees;
     }
