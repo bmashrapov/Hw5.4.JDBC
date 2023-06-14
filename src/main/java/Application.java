@@ -27,6 +27,7 @@ public class Application {
         Employee mark1 = new Employee(7, "Mark", "Johnson", "Male", 28, newYork);
         employeeDAO.updateEmployee(mark1);
 
+
         // Удаление сотрудника
         employeeDAO.deleteEmployee(mark1);
     }
