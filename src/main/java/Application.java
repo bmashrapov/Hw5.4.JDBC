@@ -1,5 +1,3 @@
-import org.hibernate.SessionFactory;
-
 import java.sql.*;
 import java.util.List;
 
@@ -12,7 +10,7 @@ public class Application {
         City newYork = new City(1, "New York");
         cityDAO.createCity(newYork);
 
-        Employee mark = new Employee(1, "Mark", "Johnson", "Male", 28, newYork.getCityId());
+        Employee mark = new Employee(1, "Mark", "Johnson", "Male", 28, newYork);
         employeeDAO.createEmployee(mark);
 
         // Получение сотрудника по ID
@@ -26,7 +24,7 @@ public class Application {
         }
 
         // Обновление информации о сотруднике
-        Employee mark1 = new Employee(7, "Mark", "Johnson", "Male", 28, newYork.getCityId());
+        Employee mark1 = new Employee(7, "Mark", "Johnson", "Male", 28, newYork);
         employeeDAO.updateEmployee(mark1);
 
         // Удаление сотрудника

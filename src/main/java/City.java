@@ -13,7 +13,7 @@ public class City {
         this.cityId = cityId;
         this.cityName = cityName;
     }
-    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "city")
     private List<Employee> employees;
 
     public City() {
